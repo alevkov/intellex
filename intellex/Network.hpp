@@ -20,6 +20,7 @@ class Network
     void feedForward(const vector<double> & in);
     void backProp(const vector<double> & targetVals);
     void getResults(vector<double> & out);
+    double getAvgError() { return __recentAverageErr; }
  private:
     vector<Layer> __layers;
     double __err;

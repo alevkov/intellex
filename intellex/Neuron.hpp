@@ -31,15 +31,16 @@ class Neuron
     double getOutputVal(void) const { return __outputVal; }
     void feedForward(const Layer & prev);
     void calcOutputGradients(double targetVal);
-    void calcHiddenGradients(Layer & next);
+    void calcHiddenGradients(const Layer & next);
     void updateInputWeights(Layer & prev);
-    double sumDerivativesOfWeights(Layer & next);
+    
  private:
     static double eta; /* [0.0 ... 1.0] training rate */
     static double alpha; /* [0.0 ... 1.0] momentum */
     static double randomWeight(void) { return rand() / double(RAND_MAX); }
     static double transferFunc(double x);
     static double transferFuncDerivative(double x);
+    double sumDerivativesOfWeights(const Layer & next);
     double __outputVal;
     double __gradient;
     unsigned __idx;

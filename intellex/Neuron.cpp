@@ -12,11 +12,11 @@ Neuron::Neuron(unsigned numOutputs, unsigned idx)
     }
 }
 
-double Neuron::sumDerivativesOfWeights(Layer & next)
+double Neuron::sumDerivativesOfWeights(const Layer & next)
 {
     double sum = 0.0;
     
-    for (unsigned n = 0; n < next.size(); ++n) {
+    for (unsigned n = 0; n < next.size() - 1; ++n) {
         sum += __outputWeights[n].weight * next[n].__gradient;
     }
     
@@ -29,7 +29,7 @@ void Neuron::calcOutputGradients(double targetVal)
     __gradient = delta * Neuron::transferFuncDerivative(__outputVal);
 }
 
-void Neuron::calcHiddenGradients(Layer & next)
+void Neuron::calcHiddenGradients(const Layer & next)
 {
     double dow = sumDerivativesOfWeights(next);
     __gradient = dow * Neuron::transferFuncDerivative(__outputVal);

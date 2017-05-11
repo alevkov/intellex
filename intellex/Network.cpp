@@ -2,7 +2,7 @@
 
 Network::Network(const vector<unsigned> & topology)
 {
-    size_t numLayers = topology.size();
+    unsigned numLayers = topology.size();
     /* i -> layer number */
     for (int layer = 0; layer < numLayers; ++layer) {
         __layers.push_back(Layer());
@@ -63,7 +63,7 @@ void Network::backProp(const vector<double> & targetVals)
     
     /* calculate gradients on hidden layers */
     
-    for (size_t layer = __layers.size() - 2; layer > 0 ; --layer) {
+    for (unsigned layer = __layers.size() - 2; layer > 0; --layer) {
         Layer &hidden = __layers[layer];
         Layer &next = __layers[layer + 1];
         
@@ -74,11 +74,11 @@ void Network::backProp(const vector<double> & targetVals)
     
     /* calculate weights */
     
-    for (size_t layer = __layers.size() - 1; layer > 0; --layer) {
+    for (unsigned layer = __layers.size() - 1; layer > 0; --layer) {
         Layer &l = __layers[layer];
         Layer &prev = __layers[layer - 1];
         
-        for (unsigned n = 0; n < l.size(); ++n) {
+        for (unsigned n = 0; n < l.size() - 1; ++n) {
             l[n].updateInputWeights(prev);
         }
     }
