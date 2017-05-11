@@ -1,15 +1,14 @@
-//
-//  main.cpp
-//  intellex
-//
-//  Created by sphota on 5/11/17.
-//  Copyright © 2017 sphota. All rights reserved.
-//
-
 #include <iostream>
+#include "Network.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    /* e.g. { 3, 2, 1 } */
+    vector<unsigned> topology;
+    topology.push_back(3);
+    topology.push_back(2);
+    topology.push_back(1);
+    Network myNet(topology);
+    
+    vector<double> in, targetVals, out;
+    /* now, use your imagination ... */
 }

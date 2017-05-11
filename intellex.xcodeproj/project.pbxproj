@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D90BD36B1EC41CBE001657D9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90BD36A1EC41CBE001657D9 /* main.cpp */; };
+		D90BD3731EC41CFD001657D9 /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90BD3711EC41CFD001657D9 /* Network.cpp */; };
+		D90BD3761EC41D5A001657D9 /* Neuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D90BD3741EC41D5A001657D9 /* Neuron.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		D90BD3671EC41CBE001657D9 /* intellex */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = intellex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D90BD36A1EC41CBE001657D9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D90BD3711EC41CFD001657D9 /* Network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Network.cpp; sourceTree = "<group>"; };
+		D90BD3721EC41CFD001657D9 /* Network.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Network.hpp; sourceTree = "<group>"; };
+		D90BD3741EC41D5A001657D9 /* Neuron.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Neuron.cpp; sourceTree = "<group>"; };
+		D90BD3751EC41D5A001657D9 /* Neuron.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Neuron.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				D90BD36A1EC41CBE001657D9 /* main.cpp */,
+				D90BD3711EC41CFD001657D9 /* Network.cpp */,
+				D90BD3721EC41CFD001657D9 /* Network.hpp */,
+				D90BD3741EC41D5A001657D9 /* Neuron.cpp */,
+				D90BD3751EC41D5A001657D9 /* Neuron.hpp */,
 			);
 			path = intellex;
 			sourceTree = "<group>";
@@ -120,7 +130,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D90BD3731EC41CFD001657D9 /* Network.cpp in Sources */,
 				D90BD36B1EC41CBE001657D9 /* main.cpp in Sources */,
+				D90BD3761EC41D5A001657D9 /* Neuron.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
