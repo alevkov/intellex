@@ -43,5 +43,6 @@ int main(int argc, const char * argv[]) {
             cout << "Output: " << out[0] << endl;
             cout << "Average error: " << myNet.getAvgError() << endl;
         }
+        cout << endl;
     }
 }

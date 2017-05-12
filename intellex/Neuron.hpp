@@ -37,9 +37,9 @@ class Neuron
  private:
     static double eta; /* [0.0 ... 1.0] training rate */
     static double alpha; /* [0.0 ... 1.0] momentum */
-    static double randomWeight(void) { return rand() / double(RAND_MAX); }
-    static double transferFunc(double x);
-    static double transferFuncDerivative(double x);
+    inline static double randomWeight(void) { srand(time(NULL)); return rand() / double(RAND_MAX); }
+    inline static double transferFunc(double x);
+    inline static double transferFuncDerivative(double x);
     double sumDerivativesOfWeights(const Layer & next);
     double __outputVal;
     double __gradient;
