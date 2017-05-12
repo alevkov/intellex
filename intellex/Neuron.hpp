@@ -27,7 +27,7 @@ class Neuron
  public:
     Neuron(unsigned numOutputs, unsigned idx);
     ~Neuron() { };
-    void setOutputVal(double val) { this->__outputVal = val; }
+    void setOutputVal(double val) { __outputVal = val; }
     double getOutputVal(void) const { return __outputVal; }
     void feedForward(const Layer & prev);
     void calcOutputGradients(double targetVal);
@@ -37,7 +37,7 @@ class Neuron
  private:
     static double eta; /* [0.0 ... 1.0] training rate */
     static double alpha; /* [0.0 ... 1.0] momentum */
-    inline static double randomWeight(void) { srand(time(NULL)); return rand() / double(RAND_MAX); }
+    inline static double randomWeight(void) { srand((unsigned)time(NULL)); return rand() / double(RAND_MAX); }
     inline static double transferFunc(double x);
     inline static double transferFuncDerivative(double x);
     double sumDerivativesOfWeights(const Layer & next);
