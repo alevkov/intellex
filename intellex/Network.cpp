@@ -43,7 +43,7 @@ void Network::backProp(const vector<double> & targetVals)
     
     for (unsigned n = 0; n < out.size() - 1; ++n) {
         double delta = targetVals[n] - out[n].getOutputVal();
-        __err = delta * delta;
+        __err += delta * delta;
     }
     
     __err /= out.size() - 1; /* get average error squared */
